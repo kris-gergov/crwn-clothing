@@ -1,3 +1,9 @@
 body {
     padding: 20px 40px;
+    font-family: "Andika New Basic", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
