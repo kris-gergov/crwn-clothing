@@ -1,25 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import "./collection-preview.styles.scss";
+import './collection-preview.styles.scss';
 
-import CollectionItem from "../collection-item/collection-item.component";
+import CollectionItem from '../collection-item/collection-item.component';
 
 const CollectionPreview = ({ title, items }) => (
-    <div className="collection-preview">
-        <h1 classNam="title">{title.toUpperCase()}</h1>
-        <div className="preview">
-            {items
-                .filter((item, index) => index < 4)
-                .map((item) => (
-                    <CollectionItem
-                        key={item.id}
-                        name={item.name}
-                        imageUrl={item.imageUrl}
-                        price={item.price}
-                    />
-                ))}
-        </div>
-    </div>
+	<div className="collection-preview">
+		<h1 classNam="title">{title.toUpperCase()}</h1>
+		<div className="preview">
+			{items
+				.filter((item, index) => index < 4)
+				.map(item => (
+					<CollectionItem key={item.id} name={item.name} imageUrl={item.imageUrl} price={item.price} />
+				))}
+		</div>
+	</div>
 );
 
 export default CollectionPreview;
